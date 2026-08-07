@@ -1,0 +1,678 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* HEADER */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(8px);
+
+    z-index:1000;
+    }
+
+.logo{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+    transition:.3s;
+}
+
+.logo img:hover{
+    transform:scale(1.05);
+}
+.menu{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("../images/hale/hero.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.hero h1{
+    color:white;
+    font-size:56px;
+    max-width:900px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:white;
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+
+.btn{
+    background:#1d3557;
+    color:white;
+    text-decoration:none;
+    padding:16px 35px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffb703;
+    color:#222;
+}
+/* =========================
+   SERVICII
+========================= */
+
+/* =========================
+   SERVICII
+========================= */
+
+.services{
+    padding:70px 8%;
+    background:#fff;
+}
+
+.services h2{
+    text-align:center;
+    font-size:40px;
+    color:#1d3557;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+.card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card-content{
+    padding:18px;
+    text-align:center;
+}
+
+.card-content h3{
+    font-size:22px;
+    color:#1d3557;
+    margin-bottom:12px;
+}
+
+.card-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:#1d3557;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.card-btn:hover{
+    color:#ffb703;
+}
+
+@media(max-width:992px){
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+/* =========================
+   DE CE NIVO
+========================= */
+
+.why{
+    background:#f7f7f7;
+    padding:80px 8%;
+}
+
+.why h2{
+    text-align:center;
+    font-size:42px;
+    color:#1d3557;
+    margin-bottom:50px;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.why-box{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.why-box:hover{
+    transform:translateY(-8px);
+}
+
+.why-box h3{
+    color:#1d3557;
+    margin-bottom:15px;
+}
+
+.why-box p{
+    color:#555;
+    line-height:1.7;
+}
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card-content{
+    padding:18px;
+}
+
+.card-content h3{
+    font-size:24px;
+    color:#1d3557;
+    margin-bottom:10px;
+}
+
+.card-btn{
+    display:inline-block;
+    margin-top:8px;
+    text-decoration:none;
+    color:#1d3557;
+    font-weight:bold;
+}
+
+.card-btn:hover{
+    color:#ffb703;
+}
+/* =========================
+   PORTOFOLIU
+========================= */
+
+.portfolio{
+    padding:80px 8%;
+    background:#fff;
+}
+
+.portfolio h2{
+    text-align:center;
+    font-size:42px;
+    color:#1d3557;
+    margin-bottom:10px;
+}
+
+.portfolio-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.portfolio-item{
+    overflow:hidden;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.portfolio-item img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.portfolio-item:hover img{
+    transform:scale(1.08);
+}
+
+@media(max-width:900px){
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+}
+/* =========================
+   BUTOANE FLOTTANTE
+========================= */
+
+.floating-buttons{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:9999;
+}
+
+.floating-buttons a{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#fff;
+    font-size:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    transition:all .3s ease;
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.call{
+    background:#1d3557;
+}
+
+.floating-buttons a:hover{
+    transform:translateY(-4px) scale(1.08);
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+/*=========================
+      CONTACT
+=========================*/
+
+.contact{
+    padding:90px 8%;
+    background:#f7f7f7;
+}
+
+.contact-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.contact-info h2{
+    font-size:42px;
+    color:#1d3557;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    font-size:18px;
+    color:#555;
+    line-height:1.7;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    transition:.3s;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+    border-color:#25D366;
+    box-shadow:0 0 10px rgba(37,211,102,.2);
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:18px;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(0,0,0,.20);
+}
+
+@media(max-width:900px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info{
+        text-align:center;
+    }
+
+}
+/*=========================
+      DESPRE NOI
+=========================*/
+
+.about{
+    padding:140px 8% 80px;
+    background:#fff;
+}
+
+.about-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.about-text{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.about-text h1{
+    font-size:48px;
+    color:#1d3557;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    max-width:850px;
+    margin:0 auto 20px;
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+}
+
+.about-boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.about-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+    transition:.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+}
+
+.about-card i{
+    font-size:42px;
+    color:#1d3557;
+    margin-bottom:20px;
+}
+
+.about-card h3{
+    color:#1d3557;
+    margin-bottom:12px;
+    font-size:24px;
+}
+
+.about-card p{
+    color:#666;
+    line-height:1.6;
+}
+
+/*=========================
+      CUM LUCRĂM
+=========================*/
+
+.steps{
+    background:#f7f7f7;
+    padding:80px 8%;
+    text-align:center;
+}
+
+.steps h2{
+    font-size:42px;
+    color:#1d3557;
+    margin-bottom:50px;
+}
+
+.steps-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-bottom:50px;
+}
+
+.step{
+    background:#fff;
+    border-radius:16px;
+    padding:35px 20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+}
+
+.step span{
+    display:inline-flex;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#1d3557;
+    color:#fff;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.step h3{
+    color:#1d3557;
+    font-size:22px;
+}
+
+@media(max-width:900px){
+
+    .steps-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .steps-container{
+        grid-template-columns:1fr;
+    }
+
+}
+/*=========================
+        FOOTER
+=========================*/
+
+.footer{
+    background:#1d3557;
+    color:#fff;
+    padding:60px 8% 20px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    margin-bottom:40px;
+}
+
+.footer-box h3{
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.footer-box p{
+    margin-bottom:12px;
+    color:#ddd;
+    line-height:1.7;
+}
+
+.footer-box a{
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-box a:hover{
+    color:#ffb703;
+}
+
+.footer-box i{
+    margin-right:8px;
+    color:#ffb703;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.15);
+    padding-top:20px;
+    color:#bbb;
+    font-size:14px;
+}
+/*=========================
+      PORTOFOLIU
+=========================*/
+
+.portfolio-page{
+    padding:140px 8% 80px;
+    background:#f5f5f5;
+}
+
+.portfolio-page h1{
+    text-align:center;
+    font-size:48px;
+    color:#1d3557;
+    margin-bottom:15px;
+}
+
+.portfolio-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:50px;
+    font-size:18px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.gallery img:hover{
+    transform:scale(1.04);
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - NIVO</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="NIVO Logo">
+</a>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="despre.html">Despre</a></li>
+            <li><a href="index.html#services">Servicii</a></li>
+            <li><a href="proiecte.html">Proiecte</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="contact">
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h1>Solicită o ofertă</h1>
+
+            <p>
+                Ai nevoie de o hală metalică, un container sau o altă structură metalică?
+                Completează formularul și trimite-ne cererea direct pe WhatsApp.
+            </p>
+
+            <div class="contact-details">
+
+                <p><i class="fa-solid fa-phone"></i> +40 762 520 530</p>
+
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp disponibil</p>
+
+                <p><i class="fa-solid fa-clock"></i> Luni - Vineri: 08:00 - 18:00</p>
+
+            </div>
+
+        </div>
+
+        <form id="offerForm" class="contact-form">
+
+            <input type="text" id="name" placeholder="Nume complet" required>
+
+            <input type="tel" id="phone" placeholder="Telefon" required>
+
+            <select id="service">
+                <option>Hale Metalice</option>
+                <option>Case pe Structură Metalică</option>
+                <option>Containere Modulare</option>
+                <option>Spălătorii Auto</option>
+                <option>Porți și Garduri Metalice</option>
+                <option>Balustrade Metalice</option>
+            </select>
+
+            <textarea id="message" rows="6" placeholder="Descrie proiectul tău..."></textarea>
+
+            <button type="button" class="whatsapp-btn" onclick="sendWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i>
+                Trimite cererea pe WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
